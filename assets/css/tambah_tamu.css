@@ -1,0 +1,394 @@
+/* =========================================================
+   TAMBAH DATA TAMU
+   TEMA DUSTY ROSE
+========================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+body{
+
+    min-height:100vh;
+
+    font-family:'Poppins', sans-serif;
+
+    background:
+        radial-gradient(
+            circle at 5% 10%,
+            rgba(201,143,165,.16),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 95% 90%,
+            rgba(120,180,220,.10),
+            transparent 30%
+        ),
+        #faf6f8;
+
+    color:#604956;
+
+    padding:40px 25px;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.form-container{
+
+    width:100%;
+
+    max-width:720px;
+
+    margin:0 auto;
+
+    padding:35px 40px;
+
+    background:#ffffff;
+
+    border-radius:24px;
+
+    border:1px solid #ead9e0;
+
+    box-shadow:
+        0 18px 45px rgba(145,91,113,.12);
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.form-header{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    padding-bottom:25px;
+
+    margin-bottom:28px;
+
+    border-bottom:1px solid #eadce2;
+}
+
+
+.title-icon{
+
+    width:55px;
+
+    height:55px;
+
+    flex-shrink:0;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:16px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #d4a0b4,
+            #b97892
+        );
+
+    color:white;
+
+    font-size:21px;
+
+    box-shadow:
+        0 7px 16px rgba(185,120,146,.20);
+}
+
+
+.form-header h1{
+
+    color:#8f526c;
+
+    font-size:27px;
+
+    font-weight:700;
+
+    line-height:1.2;
+
+    margin-bottom:5px;
+}
+
+
+.form-header p{
+
+    color:#9e8490;
+
+    font-size:13px;
+}
+
+
+/* =========================================================
+   FORM GROUP
+========================================================= */
+
+.form-group{
+
+    margin-bottom:20px;
+}
+
+
+.form-group label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    color:#674c59;
+
+    font-size:14px;
+
+    font-weight:600;
+}
+
+
+.form-group label i{
+
+    color:#ae718a;
+
+    width:20px;
+
+    margin-right:5px;
+}
+
+
+/* =========================================================
+   INPUT & SELECT
+========================================================= */
+
+.form-group input,
+.form-group select{
+
+    width:100%;
+
+    height:48px;
+
+    padding:0 15px;
+
+    border:1px solid #e2cfd8;
+
+    border-radius:12px;
+
+    background:#fffafb;
+
+    color:#604956;
+
+    outline:none;
+
+    font-family:'Poppins', sans-serif;
+
+    font-size:14px;
+
+    transition:.25s ease;
+}
+
+
+.form-group input::placeholder{
+
+    color:#b9a7b0;
+}
+
+
+/* =========================================================
+   FOCUS
+========================================================= */
+
+.form-group input:focus,
+.form-group select:focus{
+
+    background:#ffffff;
+
+    border-color:#b97892;
+
+    box-shadow:
+        0 0 0 4px rgba(185,120,146,.10);
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.form-buttons{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    gap:12px;
+
+    margin-top:28px;
+
+    padding-top:22px;
+
+    border-top:1px solid #eee1e6;
+}
+
+
+/* KEMBALI */
+
+.btn-kembali{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:8px;
+
+    min-width:120px;
+
+    height:46px;
+
+    padding:0 20px;
+
+    border-radius:12px;
+
+    border:1px solid #ead6df;
+
+    background:#faf3f6;
+
+    color:#986078;
+
+    text-decoration:none;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    transition:.25s ease;
+}
+
+
+.btn-kembali:hover{
+
+    background:#f2e4ea;
+
+    transform:translateY(-2px);
+}
+
+
+/* SIMPAN */
+
+.btn-simpan{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:8px;
+
+    min-width:130px;
+
+    height:46px;
+
+    padding:0 22px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #c58ca2,
+            #ae718a
+        );
+
+    color:#ffffff;
+
+    font-family:'Poppins', sans-serif;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    box-shadow:
+        0 8px 18px rgba(174,113,138,.22);
+
+    transition:.25s ease;
+}
+
+
+.btn-simpan:hover{
+
+    transform:translateY(-2px);
+
+    background:
+        linear-gradient(
+            135deg,
+            #b97892,
+            #9f6079
+        );
+
+    box-shadow:
+        0 10px 22px rgba(159,96,121,.25);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:600px){
+
+    body{
+
+        padding:20px 12px;
+    }
+
+
+    .form-container{
+
+        padding:25px 20px;
+
+        border-radius:18px;
+    }
+
+
+    .form-header h1{
+
+        font-size:22px;
+    }
+
+
+    .form-header p{
+
+        font-size:12px;
+    }
+
+
+    .form-buttons{
+
+        flex-direction:column-reverse;
+    }
+
+
+    .btn-kembali,
+    .btn-simpan{
+
+        width:100%;
+    }
+
+}

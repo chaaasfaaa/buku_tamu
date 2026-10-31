@@ -1,0 +1,2232 @@
+/* =========================================================
+   BUKU TAMU DIGITAL
+   FORM ISI BUKU TAMU
+   WARNA TETAP
+========================================================= */
+
+
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    min-height: 100%;
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+
+    background: #fff8fc;
+
+    color: #202642;
+
+    min-height: 100vh;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.sidebar {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 220px;
+
+    height: 100vh;
+
+    padding: 28px 14px;
+
+    background: #D093B0;
+
+    color: #ffffff;
+
+    z-index: 1000;
+
+    box-shadow:
+        5px 0 22px rgba(208,147,176,.08);
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding:
+        0 10px 28px;
+
+    color: #ffffff;
+}
+
+
+.logo i {
+
+    font-size: 43px;
+
+    color: #ffffff;
+}
+
+
+.logo div {
+
+    font-size: 28px;
+
+    font-weight: 800;
+
+    line-height: 1.05;
+
+    color: #ffffff;
+}
+
+
+.sidebar-line {
+
+    width: 100%;
+
+    height: 1px;
+
+    margin-bottom: 18px;
+
+    background:
+        rgba(255,255,255,.30);
+}
+
+
+/* =========================================================
+   MENU
+========================================================= */
+
+.sidebar nav {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+
+.menu {
+
+    width: 100%;
+
+    min-height: 58px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 11px 16px;
+
+    border-radius: 15px;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition:
+        background .25s ease,
+        transform .25s ease;
+}
+
+
+.menu i {
+
+    width: 25px;
+
+    flex-shrink: 0;
+
+    text-align: center;
+
+    font-size: 20px;
+}
+
+
+.menu:hover {
+
+    background:
+        rgba(255,255,255,.16);
+
+    transform:
+        translateX(2px);
+}
+
+
+.menu.active {
+
+    background:
+        rgba(255,255,255,.28);
+
+    color: #ffffff;
+
+    box-shadow: none;
+}
+
+
+.menu.active i {
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.content {
+
+    margin-left: 220px;
+
+    min-height: 100vh;
+
+    padding:
+        22px 30px 24px;
+
+    background: #fff8fc;
+}
+
+
+/* =========================================================
+   TOP INFO
+========================================================= */
+
+.top-info {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    align-items: center;
+
+    gap: 14px;
+
+    margin-bottom: 18px;
+}
+
+
+.date-box,
+.clock-box {
+
+    min-width: 205px;
+
+    min-height: 64px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding:
+        10px 14px;
+
+    background: #ffffff;
+
+    border:
+        1px solid #f1dce6;
+
+    border-radius: 17px;
+
+    box-shadow:
+        0 7px 22px
+        rgba(208,147,176,.10);
+}
+
+
+.top-icon {
+
+    width: 43px;
+
+    height: 43px;
+
+    min-width: 43px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #f8e2ed;
+
+    color: #D093B0;
+
+    border-radius: 50%;
+
+    font-size: 18px;
+}
+
+
+.date-box strong {
+
+    display: block;
+
+    color: #202642;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+
+.date-box span {
+
+    display: block;
+
+    margin-top: 2px;
+
+    color: #777b91;
+
+    font-size: 10px;
+}
+
+
+.clock-box small {
+
+    display: block;
+
+    color: #777b91;
+
+    font-size: 9px;
+}
+
+
+.clock-box strong {
+
+    display: block;
+
+    margin-top: 2px;
+
+    color: #202642;
+
+    font-size: 16px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   FORM CONTAINER
+========================================================= */
+
+.form-container {
+
+    width: 100%;
+
+    background: #ffffff;
+
+    border:
+        1px solid #f1dce6;
+
+    border-radius: 21px;
+
+    padding:
+        23px 25px 24px;
+
+    box-shadow:
+        0 10px 30px
+        rgba(208,147,176,.09);
+}
+
+
+/* =========================================================
+   FORM HEADER
+========================================================= */
+
+.form-header {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    padding-bottom: 18px;
+
+    margin-bottom: 18px;
+
+    border-bottom:
+        1px solid #f1dce6;
+}
+
+
+.book-icon {
+
+    width: 52px;
+
+    height: 52px;
+
+    min-width: 52px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #f8e2ed;
+
+    color: #D093B0;
+
+    border-radius: 15px;
+
+    font-size: 22px;
+}
+
+
+.form-header h1 {
+
+    color: #202642;
+
+    font-size: 25px;
+
+    line-height: 1.2;
+
+    font-weight: 800;
+}
+
+
+.form-header p {
+
+    margin-top: 4px;
+
+    color: #777b91;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   FORM GRID
+========================================================= */
+
+.form-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    column-gap: 18px;
+
+    row-gap: 15px;
+}
+
+
+/* =========================================================
+   FORM GROUP
+========================================================= */
+
+.form-group {
+
+    min-width: 0;
+}
+
+
+.form-group label {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    margin-bottom: 7px;
+
+    color: #202642;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+
+.form-group label i {
+
+    width: 15px;
+
+    color: #D093B0;
+
+    text-align: center;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   INPUT BOX
+========================================================= */
+
+.input-box {
+
+    position: relative;
+
+    width: 100%;
+}
+
+
+.input-icon {
+
+    position: absolute;
+
+    left: 14px;
+
+    top: 50%;
+
+    z-index: 2;
+
+    transform:
+        translateY(-50%);
+
+    color: #D093B0;
+
+    font-size: 14px;
+
+    pointer-events: none;
+}
+
+
+.input-box input,
+.input-box select {
+
+    width: 100%;
+
+    height: 48px;
+
+    padding:
+        0 14px 0 42px;
+
+    border:
+        1.5px solid #efb4cc;
+
+    border-radius: 12px;
+
+    outline: none;
+
+    background: #fffafd;
+
+    color: #202642;
+
+    font-family:
+        'Poppins', sans-serif;
+
+    font-size: 11px;
+
+    transition:
+        border-color .2s ease,
+        box-shadow .2s ease,
+        background .2s ease;
+}
+
+
+.input-box input::placeholder {
+
+    color: #aaa2b2;
+}
+
+
+.input-box input:focus,
+.input-box select:focus {
+
+    background: #ffffff;
+
+    border-color: #D093B0;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(208,147,176,.11);
+}
+
+
+.input-box select {
+
+    appearance: none;
+
+    -webkit-appearance: none;
+
+    padding-right: 38px;
+
+    cursor: pointer;
+}
+
+
+.input-box::after {
+
+    content: "\f107";
+
+    position: absolute;
+
+    right: 15px;
+
+    top: 50%;
+
+    transform:
+        translateY(-50%);
+
+    color: #D093B0;
+
+    font-family:
+        "Font Awesome 6 Free";
+
+    font-weight: 900;
+
+    font-size: 11px;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.form-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 21px;
+
+    padding-top: 18px;
+
+    border-top:
+        1px solid #f1dce6;
+}
+
+
+/* =========================================================
+   SIMPAN
+========================================================= */
+
+.btn-simpan {
+
+    flex: 1;
+
+    height: 47px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #D093B0;
+
+    color: #ffffff;
+
+    font-family:
+        'Poppins', sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 7px 17px
+        rgba(208,147,176,.16);
+
+    transition:
+        transform .2s ease,
+        background .2s ease,
+        box-shadow .2s ease;
+}
+
+
+.btn-simpan:hover {
+
+    background: #c783a3;
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 10px 20px
+        rgba(208,147,176,.20);
+}
+
+
+/* =========================================================
+   DASHBOARD
+========================================================= */
+
+.btn-dashboard {
+
+    width: 125px;
+
+    height: 47px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    border:
+        1.5px solid #D093B0;
+
+    border-radius: 12px;
+
+    background: #ffffff;
+
+    color: #D093B0;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    transition:
+        background .2s ease,
+        color .2s ease,
+        transform .2s ease;
+}
+
+
+.btn-dashboard:hover {
+
+    background: #D093B0;
+
+    color: #ffffff;
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-top: 15px;
+
+    color: #a47b91;
+
+    font-size: 9.5px;
+}
+
+
+footer::before,
+footer::after {
+
+    content: "";
+
+    width: 42px;
+
+    height: 1px;
+
+    background: #edcad9;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 950px) {
+
+    .content {
+
+        margin-left: 190px;
+
+        padding:
+            20px;
+    }
+
+
+    .top-info {
+
+        justify-content: flex-end;
+    }
+
+
+    .date-box,
+    .clock-box {
+
+        min-width: 180px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .sidebar {
+
+        width: 75px;
+
+        padding:
+            22px 9px;
+    }
+
+
+    .logo {
+
+        justify-content: center;
+
+        padding:
+            0 0 25px;
+    }
+
+
+    .logo div {
+
+        display: none;
+    }
+
+
+    .logo i {
+
+        font-size: 30px;
+    }
+
+
+    .menu {
+
+        justify-content: center;
+
+        padding:
+            14px 5px;
+    }
+
+
+    .menu span {
+
+        display: none;
+    }
+
+
+    .menu i {
+
+        width: auto;
+
+        font-size: 19px;
+    }
+
+
+    .content {
+
+        margin-left: 75px;
+
+        padding:
+            16px 13px 20px;
+    }
+
+
+    .top-info {
+
+        justify-content: stretch;
+
+        gap: 8px;
+    }
+
+
+    .date-box,
+    .clock-box {
+
+        min-width: 0;
+
+        flex: 1;
+
+        padding:
+            9px 10px;
+    }
+
+
+    .top-icon {
+
+        width: 38px;
+
+        height: 38px;
+
+        min-width: 38px;
+
+        font-size: 16px;
+    }
+
+
+    .date-box strong {
+
+        font-size: 10px;
+    }
+
+
+    .clock-box strong {
+
+        font-size: 13px;
+    }
+
+
+    .form-container {
+
+        padding:
+            19px 17px;
+    }
+
+
+    .form-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .form-header h1 {
+
+        font-size: 22px;
+    }
+
+
+    .form-header p {
+
+        font-size: 10px;
+    }
+
+
+    .form-actions {
+
+        flex-direction: column;
+    }
+
+
+    .btn-simpan,
+    .btn-dashboard {
+
+        width: 100%;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 430px) {
+
+    .content {
+
+        margin-left: 70px;
+
+        padding:
+            13px 10px 18px;
+    }
+
+
+    .date-box,
+    .clock-box {
+
+        min-height: 57px;
+    }
+
+
+    .top-icon {
+
+        width: 34px;
+
+        height: 34px;
+
+        min-width: 34px;
+
+        font-size: 14px;
+    }
+
+
+    .form-container {
+
+        padding:
+            16px 14px;
+    }
+
+
+    .form-header {
+
+        gap: 10px;
+    }
+
+
+    .book-icon {
+
+        width: 45px;
+
+        height: 45px;
+
+        min-width: 45px;
+
+        font-size: 19px;
+    }
+
+
+    .form-header h1 {
+
+        font-size: 19px;
+    }
+
+
+    .input-box input,
+    .input-box select {
+
+        height: 46px;
+
+        font-size: 10px;
+    }
+
+}
+
+/* =========================================================
+   PANDUAN PENGISIAN
+   WARNA TETAP
+========================================================= */
+
+.panduan-card {
+    width: 100%;
+
+    margin-top: 14px;
+
+    padding: 17px 20px;
+
+    background: #ffffff;
+
+    border: 1px solid #f1dce6;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 22px rgba(208,147,176,.07);
+}
+
+
+/* HEADER */
+
+.panduan-header {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding-bottom: 12px;
+
+    border-bottom: 1px solid #f1dce6;
+}
+
+
+.panduan-icon {
+    width: 39px;
+
+    height: 39px;
+
+    min-width: 39px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #f8e2ed;
+
+    color: #D093B0;
+
+    border-radius: 11px;
+
+    font-size: 15px;
+}
+
+
+.panduan-header h2 {
+    margin: 0;
+
+    color: #202642;
+
+    font-size: 16px;
+
+    font-weight: 700;
+}
+
+
+.panduan-header p {
+    margin-top: 2px;
+
+    color: #777b91;
+
+    font-size: 9px;
+}
+
+
+/* GRID */
+
+.panduan-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 10px;
+
+    margin-top: 11px;
+}
+
+
+/* ITEM */
+
+.panduan-item {
+    min-height: 63px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    padding: 10px;
+
+    background: #fffafd;
+
+    border: 1px solid #f2e0e8;
+
+    border-radius: 11px;
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+
+.panduan-item:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 6px 14px rgba(208,147,176,.07);
+}
+
+
+/* ICON ITEM */
+
+.panduan-item-icon {
+    width: 32px;
+
+    height: 32px;
+
+    min-width: 32px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #f8e2ed;
+
+    color: #D093B0;
+
+    border-radius: 9px;
+
+    font-size: 12px;
+}
+
+
+/* TEXT ITEM */
+
+.panduan-item strong {
+    display: block;
+
+    color: #202642;
+
+    font-size: 10px;
+
+    font-weight: 700;
+}
+
+
+.panduan-item span {
+    display: block;
+
+    margin-top: 2px;
+
+    color: #777b91;
+
+    font-size: 8.5px;
+
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   KECILKAN SEDIKIT TEKS FORM
+========================================================= */
+
+.form-header h1 {
+    font-size: 23px !important;
+}
+
+.form-header p {
+    font-size: 10px !important;
+}
+
+.form-group label {
+    font-size: 10px !important;
+}
+
+.input-box input,
+.input-box select {
+    font-size: 10px !important;
+}
+
+
+/* BUTTON */
+
+.btn-simpan,
+.btn-dashboard {
+    font-size: 10px !important;
+}
+
+
+/* FOOTER */
+
+footer {
+    font-size: 9px !important;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .panduan-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .panduan-card {
+        padding: 15px;
+    }
+
+}
+
+/* =========================================================
+   FINAL - PERBESAR TULISAN ISI BUKU TAMU
+   WARNA TETAP
+========================================================= */
+
+/* JUDUL FORM */
+.form-header h1 {
+    font-size: 25px !important;
+}
+
+.form-header p {
+    font-size: 11px !important;
+}
+
+
+/* LABEL */
+.form-group label {
+    font-size: 11px !important;
+}
+
+.form-group label i {
+    font-size: 13px !important;
+}
+
+
+/* INPUT */
+.input-box input,
+.input-box select {
+    font-size: 11px !important;
+}
+
+.input-box input::placeholder {
+    font-size: 11px !important;
+}
+
+
+/* TOMBOL */
+.btn-simpan,
+.btn-dashboard {
+    font-size: 11px !important;
+}
+
+
+/* PANDUAN */
+.panduan-header h2 {
+    font-size: 17px !important;
+}
+
+.panduan-header p {
+    font-size: 10px !important;
+}
+
+.panduan-item strong {
+    font-size: 11px !important;
+}
+
+.panduan-item span {
+    font-size: 9.5px !important;
+}
+
+
+/* TANGGAL & JAM */
+.date-box strong {
+    font-size: 12px !important;
+}
+
+.date-box span {
+    font-size: 10px !important;
+}
+
+.clock-box small {
+    font-size: 10px !important;
+}
+
+.clock-box strong {
+    font-size: 16px !important;
+}
+
+
+/* FOOTER */
+footer {
+    font-size: 10px !important;
+}
+
+/* =========================================================
+   PERBESAR TEKS SEDIKIT LAGI
+   WARNA TETAP
+========================================================= */
+
+.form-header h1 {
+    font-size: 27px !important;
+}
+
+.form-header p {
+    font-size: 12px !important;
+}
+
+.form-group label {
+    font-size: 12px !important;
+}
+
+.input-box input,
+.input-box select {
+    font-size: 12px !important;
+}
+
+.input-box input::placeholder {
+    font-size: 12px !important;
+}
+
+.btn-simpan,
+.btn-dashboard {
+    font-size: 12px !important;
+}
+
+.panduan-header h2 {
+    font-size: 18px !important;
+}
+
+.panduan-header p {
+    font-size: 10.5px !important;
+}
+
+.panduan-item strong {
+    font-size: 12px !important;
+}
+
+.panduan-item span {
+    font-size: 10px !important;
+}
+
+.date-box strong {
+    font-size: 13px !important;
+}
+
+.date-box span {
+    font-size: 11px !important;
+}
+
+.clock-box small {
+    font-size: 10.5px !important;
+}
+
+.clock-box strong {
+    font-size: 17px !important;
+}
+
+footer {
+    font-size: 10.5px !important;
+}
+
+/* =========================================================
+   PANDUAN & BANTUAN
+   WARNA TETAP
+========================================================= */
+
+.panduan-card {
+    width: 100%;
+
+    margin-top: 14px;
+
+    padding: 17px 20px;
+
+    background: #ffffff;
+
+    border: 1px solid #f1dce6;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 22px rgba(208,147,176,.07);
+}
+
+
+.panduan-header {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding-bottom: 12px;
+
+    border-bottom:
+        1px solid #f1dce6;
+}
+
+
+.panduan-icon {
+    width: 39px;
+    height: 39px;
+
+    min-width: 39px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #f8e2ed;
+
+    color: #D093B0;
+
+    border-radius: 11px;
+
+    font-size: 15px;
+}
+
+
+.panduan-header h2 {
+    color: #202642;
+
+    font-size: 17px;
+
+    font-weight: 700;
+}
+
+
+.panduan-header p {
+    margin-top: 2px;
+
+    color: #777b91;
+
+    font-size: 10px;
+}
+
+
+/* GRID */
+
+.panduan-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 10px;
+
+    margin-top: 11px;
+}
+
+
+/* ITEM */
+
+.panduan-item {
+    min-height: 63px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    padding: 10px;
+
+    background: #fffafd;
+
+    border: 1px solid #f2e0e8;
+
+    border-radius: 11px;
+
+    color: inherit;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease,
+        border-color .2s ease;
+}
+
+
+.panduan-item:hover {
+    transform: translateY(-3px);
+
+    border-color: #D093B0;
+
+    box-shadow:
+        0 7px 16px rgba(208,147,176,.10);
+}
+
+
+/* ICON ITEM */
+
+.panduan-item-icon {
+    width: 32px;
+    height: 32px;
+
+    min-width: 32px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #f8e2ed;
+
+    color: #D093B0;
+
+    border-radius: 9px;
+
+    font-size: 12px;
+}
+
+
+/* TEXT */
+
+.panduan-item strong {
+    display: block;
+
+    color: #202642;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+
+.panduan-item span {
+    display: block;
+
+    margin-top: 2px;
+
+    color: #777b91;
+
+    font-size: 9px;
+
+    line-height: 1.4;
+}
+
+
+/* ARROW */
+
+.panduan-arrow {
+    margin-left: auto;
+
+    color: #D093B0;
+
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   TOMBOL PENGADUAN
+========================================================= */
+
+.btn-pengaduan {
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    margin-top: 11px;
+
+    padding: 12px 14px;
+
+    background: #fffafd;
+
+    border: 1px solid #efb4cc;
+
+    border-radius: 12px;
+
+    color: #202642;
+
+    text-decoration: none;
+
+    transition:
+        background .2s ease,
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+
+.btn-pengaduan:hover {
+    background: #fff4f8;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 7px 16px rgba(208,147,176,.10);
+}
+
+
+.pengaduan-icon {
+    width: 36px;
+    height: 36px;
+
+    min-width: 36px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #f8e2ed;
+
+    color: #D093B0;
+
+    border-radius: 10px;
+
+    font-size: 14px;
+}
+
+
+.btn-pengaduan div:nth-child(2) {
+    flex: 1;
+}
+
+
+.btn-pengaduan strong {
+    display: block;
+
+    color: #202642;
+
+    font-size: 11px;
+}
+
+
+.btn-pengaduan span {
+    display: block;
+
+    margin-top: 2px;
+
+    color: #777b91;
+
+    font-size: 9px;
+}
+
+
+.btn-pengaduan > i {
+    color: #D093B0;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+.bantuan-modal {
+    position: fixed;
+
+    inset: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+    z-index: 9999;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition: .2s ease;
+}
+
+
+.bantuan-modal.show {
+    opacity: 1;
+
+    visibility: visible;
+}
+
+
+.bantuan-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(32,38,66,.25);
+
+    backdrop-filter: blur(3px);
+}
+
+
+.bantuan-box {
+    position: relative;
+
+    width: 100%;
+
+    max-width: 430px;
+
+    padding: 25px;
+
+    background: #ffffff;
+
+    border: 1px solid #f1dce6;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 18px 45px rgba(32,38,66,.15);
+
+    text-align: center;
+
+    transform: translateY(10px);
+
+    transition: .2s ease;
+
+    z-index: 2;
+}
+
+
+.bantuan-modal.show .bantuan-box {
+    transform: translateY(0);
+}
+
+
+.bantuan-close {
+    position: absolute;
+
+    top: 12px;
+
+    right: 12px;
+
+    width: 30px;
+
+    height: 30px;
+
+    border: none;
+
+    background: #f8e2ed;
+
+    color: #D093B0;
+
+    border-radius: 9px;
+
+    cursor: pointer;
+}
+
+
+.bantuan-modal-icon {
+    width: 48px;
+
+    height: 48px;
+
+    margin: 0 auto 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #f8e2ed;
+
+    color: #D093B0;
+
+    border-radius: 14px;
+
+    font-size: 19px;
+}
+
+
+.bantuan-box h3 {
+    color: #202642;
+
+    font-size: 18px;
+
+    margin-bottom: 8px;
+}
+
+
+.bantuan-box p {
+    color: #777b91;
+
+    font-size: 11px;
+
+    line-height: 1.6;
+
+    margin-bottom: 17px;
+}
+
+
+.bantuan-ok {
+    width: 100%;
+
+    height: 42px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #D093B0;
+
+    color: #ffffff;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .panduan-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .panduan-card {
+        padding: 15px;
+    }
+
+    .bantuan-box {
+        padding: 22px 18px;
+    }
+
+}
+
+/* =========================================================
+   SAMAKAN UKURAN TEKS DENGAN HALAMAN PENGADUAN
+   WARNA TETAP
+========================================================= */
+
+/* JUDUL FORM */
+
+.form-header h1 {
+    font-size: 31px !important;
+    line-height: 1.25 !important;
+}
+
+.form-header p {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+}
+
+
+/* LABEL FORM */
+
+.form-group label {
+    font-size: 14px !important;
+    margin-bottom: 9px !important;
+}
+
+.form-group label i {
+    font-size: 15px !important;
+}
+
+
+/* INPUT */
+
+.input-box input,
+.input-box select {
+    font-size: 13px !important;
+}
+
+.input-box input::placeholder {
+    font-size: 12px !important;
+}
+
+
+/* TOMBOL */
+
+.btn-simpan,
+.btn-dashboard {
+    font-size: 13px !important;
+}
+
+
+/* PANDUAN */
+
+.panduan-header h2 {
+    font-size: 18px !important;
+}
+
+.panduan-header p {
+    font-size: 10.5px !important;
+}
+
+.panduan-item strong {
+    font-size: 12px !important;
+}
+
+.panduan-item span {
+    font-size: 10px !important;
+}
+
+
+/* PENGADUAN */
+
+.btn-pengaduan strong {
+    font-size: 12px !important;
+}
+
+.btn-pengaduan span {
+    font-size: 10px !important;
+}
+
+
+/* TANGGAL & JAM */
+
+.date-box strong {
+    font-size: 13px !important;
+}
+
+.date-box span {
+    font-size: 11px !important;
+}
+
+.clock-box small {
+    font-size: 10.5px !important;
+}
+
+.clock-box strong {
+    font-size: 17px !important;
+}
+
+
+/* FOOTER */
+
+footer {
+    font-size: 11px !important;
+}
+
+/* =========================================================
+   SIDEBAR - SAMAKAN DENGAN DASHBOARD USER
+========================================================= */
+
+.sidebar {
+    position: fixed !important;
+
+    top: 0 !important;
+    left: 0 !important;
+
+    width: 220px !important;
+    height: 100vh !important;
+
+    padding: 28px 15px !important;
+
+    background: #D093B0 !important;
+
+    box-sizing: border-box !important;
+
+    z-index: 1000 !important;
+}
+
+
+/* MENU */
+
+.sidebar nav {
+    width: 100% !important;
+
+    display: flex !important;
+
+    flex-direction: column !important;
+
+    gap: 8px !important;
+}
+
+
+.sidebar .menu {
+    width: 100% !important;
+
+    min-width: 0 !important;
+
+    min-height: 58px !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+
+    gap: 18px !important;
+
+    padding: 11px 16px !important;
+
+    margin: 0 !important;
+
+    border-radius: 15px !important;
+
+    box-sizing: border-box !important;
+}
+
+
+.sidebar .menu.active {
+    width: 100% !important;
+
+    min-width: 100% !important;
+
+    margin-left: 0 !important;
+
+    margin-right: 0 !important;
+
+    background: rgba(255,255,255,.28) !important;
+
+    color: #ffffff !important;
+}
+
+
+/* LOGO */
+
+.sidebar .logo {
+    width: 100% !important;
+}
+
+
+/* CONTENT */
+
+.content {
+    margin-left: 220px !important;
+}
+
+/* =========================================================
+   LOGOUT DI PALING BAWAH
+========================================================= */
+
+.sidebar {
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.sidebar-menu {
+    width: 100%;
+}
+
+.sidebar-logout {
+    width: 100%;
+    margin-top: auto !important;
+    padding-top: 18px;
+    border-top: 1px solid rgba(255,255,255,.28);
+}
+
+.sidebar-logout .menu {
+    width: 100% !important;
+    margin: 0 !important;
+}
+
+/* ==================================================
+   SAMAKAN SIDEBAR DENGAN DASHBOARD USER
+================================================== */
+
+.sidebar {
+    width: 257px !important;
+    min-width: 257px !important;
+    max-width: 257px !important;
+}
+
+.sidebar .logo {
+    width: 100% !important;
+}
+
+.sidebar nav,
+.sidebar-menu {
+    width: 100% !important;
+}
+
+.sidebar .menu {
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+}
+
+/* Isi bagian utama mengikuti lebar sidebar */
+.content {
+    margin-left: 257px !important;
+}
+
+/* ==========================================
+   PERBESAR TEKS ISI BUKU TAMU
+========================================== */
+
+/* Judul form */
+.form-header h1 {
+    font-size: 31px !important;
+}
+
+.form-header p {
+    font-size: 14px !important;
+}
+
+
+/* Label form */
+.form-group label {
+    font-size: 15px !important;
+}
+
+
+/* Isi input */
+.input-box input,
+.input-box select {
+    font-size: 14px !important;
+}
+
+
+/* Placeholder */
+.input-box input::placeholder {
+    font-size: 13px !important;
+}
+
+
+/* Tombol */
+.btn-simpan,
+.btn-dashboard {
+    font-size: 14px !important;
+}
+
+
+/* Judul Panduan */
+.panduan-header h2 {
+    font-size: 20px !important;
+}
+
+.panduan-header p {
+    font-size: 13px !important;
+}
+
+
+/* Isi item panduan */
+.panduan-item strong {
+    font-size: 14px !important;
+}
+
+.panduan-item span {
+    font-size: 12px !important;
+}
+
+
+/* Tombol pengaduan */
+.btn-pengaduan strong {
+    font-size: 14px !important;
+}
+
+.btn-pengaduan span {
+    font-size: 12px !important;
+}
+
+
+/* Sidebar sedikit lebih jelas */
+.sidebar .menu {
+    font-size: 15px !important;
+}
+
+.sidebar .logo div {
+    font-size: 27px !important;
+}
+
+
+/* Tanggal & jam */
+.date-box strong {
+    font-size: 14px !important;
+}
+
+.date-box span {
+    font-size: 12px !important;
+}
+
+.clock-box small {
+    font-size: 12px !important;
+}
+
+.clock-box strong {
+    font-size: 17px !important;
+}

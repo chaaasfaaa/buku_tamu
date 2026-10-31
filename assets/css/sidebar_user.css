@@ -1,0 +1,482 @@
+/* =====================================================
+   SIDEBAR USER - BUKU TAMU DIGITAL
+===================================================== */
+
+.user-sidebar {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 257px;
+    min-width: 257px;
+    max-width: 257px;
+
+    height: 100vh;
+
+    padding: 28px 16px;
+
+    background: #D093B0;
+
+    color: #ffffff;
+
+    font-family: 'Poppins', sans-serif;
+
+    display: flex;
+    flex-direction: column;
+
+    z-index: 9999;
+
+    box-sizing: border-box;
+
+}
+
+
+/* =====================================================
+   LOGO / JUDUL
+===================================================== */
+
+.user-sidebar-logo {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 0 10px 28px;
+
+    box-sizing: border-box;
+
+}
+
+
+.user-sidebar-logo i {
+
+    width: 43px;
+    min-width: 43px;
+
+    height: 43px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #ffffff;
+
+    font-size: 43px;
+
+}
+
+
+.user-sidebar-logo h2 {
+
+    margin: 0;
+    padding: 0;
+
+    color: #ffffff;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 28px;
+
+    font-weight: 800;
+
+    line-height: 1.05;
+
+}
+
+
+/* =====================================================
+   GARIS PEMBATAS DI BAWAH JUDUL
+===================================================== */
+
+.user-sidebar-line {
+
+    width: 100%;
+
+    height: 1px;
+
+    background: rgba(255,255,255,0.30);
+
+    margin-bottom: 18px;
+
+    flex-shrink: 0;
+
+}
+
+
+/* =====================================================
+   MENU
+===================================================== */
+
+.user-sidebar-menu {
+
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+}
+
+
+/* =====================================================
+   SEMUA MENU SAMA
+===================================================== */
+
+.user-sidebar-menu a {
+
+    width: 100%;
+
+    height: 58px;
+
+    min-height: 58px;
+    max-height: 58px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 11px 16px;
+
+    margin: 0;
+
+    border-radius: 15px;
+
+    background: transparent;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    box-sizing: border-box;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+
+}
+
+
+/* =====================================================
+   SEMUA ICON SAMA UKURAN
+===================================================== */
+
+.user-sidebar-menu a i {
+
+    width: 22px;
+    min-width: 22px;
+    max-width: 22px;
+
+    height: 22px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #ffffff;
+
+    font-size: 18px;
+
+    flex-shrink: 0;
+
+}
+
+
+/* =====================================================
+   SEMUA TULISAN SAMA
+===================================================== */
+
+.user-sidebar-menu a span {
+
+    display: block;
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    line-height: 1.25;
+
+}
+
+
+/* =====================================================
+   MENU AKTIF
+===================================================== */
+
+.user-sidebar-menu a.active {
+
+    background: rgba(255,255,255,0.28);
+
+    color: #ffffff;
+
+    transform: none;
+
+    box-shadow: none;
+
+}
+
+
+.user-sidebar-menu a.active i {
+
+    color: #ffffff;
+
+}
+
+
+.user-sidebar-menu a.active span {
+
+    color: #ffffff;
+
+    font-weight: 700;
+
+}
+
+
+/* =====================================================
+   HOVER
+===================================================== */
+
+.user-sidebar-menu a:hover {
+
+    background: rgba(255,255,255,0.18);
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    transform: none;
+
+}
+
+
+/* =====================================================
+   LOGOUT
+===================================================== */
+
+.user-sidebar-logout {
+
+    width: 100%;
+
+    margin-top: auto;
+
+    padding-top: 18px;
+
+    border-top: 1px solid rgba(255,255,255,0.28);
+
+}
+
+
+/* =====================================================
+   LINK LOGOUT
+===================================================== */
+
+.user-sidebar-logout a {
+
+    width: 100%;
+
+    height: 58px;
+
+    min-height: 58px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 11px 16px;
+
+    margin: 0;
+
+    border-radius: 15px;
+
+    background: transparent;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    box-sizing: border-box;
+
+    transition:
+        background 0.2s ease;
+
+}
+
+
+.user-sidebar-logout a i {
+
+    width: 22px;
+    min-width: 22px;
+    max-width: 22px;
+
+    height: 22px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #ffffff;
+
+    font-size: 18px;
+
+}
+
+
+.user-sidebar-logout a span {
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+}
+
+
+/* =====================================================
+   HOVER LOGOUT
+===================================================== */
+
+.user-sidebar-logout a:hover {
+
+    background: rgba(255,255,255,0.18);
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+}
+
+
+/* =====================================================
+   AGAR CONTENT SEMUA HALAMAN USER MENYESUAIKAN SIDEBAR
+===================================================== */
+
+.user-sidebar ~ .content {
+
+    margin-left: 257px !important;
+
+}
+
+
+.user-sidebar ~ .main {
+
+    margin-left: 257px !important;
+
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .user-sidebar {
+
+        width: 220px;
+
+        min-width: 220px;
+        max-width: 220px;
+
+        padding: 25px 12px;
+
+    }
+
+
+    .user-sidebar-logo h2 {
+
+        font-size: 24px;
+
+    }
+
+
+    .user-sidebar-logo i {
+
+        font-size: 38px;
+
+        width: 38px;
+        min-width: 38px;
+
+    }
+
+
+    .user-sidebar-menu a,
+    .user-sidebar-logout a {
+
+        font-size: 14px;
+
+    }
+
+
+    .user-sidebar-menu a span,
+    .user-sidebar-logout a span {
+
+        font-size: 14px;
+
+    }
+
+
+    .user-sidebar ~ .content {
+
+        margin-left: 220px !important;
+
+    }
+
+
+    .user-sidebar ~ .main {
+
+        margin-left: 220px !important;
+
+    }
+
+}
+
+
+/* =====================================================
+   SCROLLBAR
+===================================================== */
+
+.user-sidebar::-webkit-scrollbar {
+
+    width: 5px;
+
+}
+
+
+.user-sidebar::-webkit-scrollbar-thumb {
+
+    background: rgba(255,255,255,0.30);
+
+    border-radius: 10px;
+
+}

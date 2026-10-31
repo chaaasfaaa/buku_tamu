@@ -1,0 +1,1570 @@
+/* =========================================================
+   BUKU TAMU DIGITAL
+   DATA KEPERLUAN
+   FINAL UI / UX
+   WARNA TETAP
+========================================================= */
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    min-height: 100%;
+}
+
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+
+    background: #fcf8fa;
+
+    color: #684d5b;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.content {
+    margin-left: 220px;
+
+    min-height: 100vh;
+
+    padding: 25px 28px 25px;
+
+    background: #fcf8fa;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.page-header {
+    display: grid;
+
+    grid-template-columns:
+        minmax(300px, 1fr)
+        auto;
+
+    align-items: end;
+
+    gap: 25px;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.title-section {
+    min-width: 0;
+}
+
+
+.title-heading {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+.title-icon {
+    width: 46px;
+    height: 46px;
+
+    min-width: 46px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #f3d1df;
+
+    color: #c47796;
+
+    border-radius: 13px;
+
+    font-size: 18px;
+}
+
+
+.title-section h1 {
+    margin: 0;
+
+    color: #9f5575;
+
+    font-size: 28px;
+
+    line-height: 1.15;
+
+    font-weight: 700;
+}
+
+
+.title-section p {
+    margin-top: 4px;
+
+    color: #765967;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.search-box {
+    width: 300px;
+
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    margin-top: 14px;
+
+    padding: 0 13px;
+
+    background: #ffffff;
+
+    border: 1px solid #ead5df;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 5px 16px rgba(180,110,145,.05);
+
+    transition:
+        border-color .2s ease,
+        box-shadow .2s ease;
+}
+
+
+.search-box:focus-within {
+    border-color: #d093b0;
+
+    box-shadow:
+        0 0 0 3px rgba(208,147,176,.08);
+}
+
+
+.search-box i {
+    color: #b56f91;
+
+    font-size: 13px;
+}
+
+
+.search-box input {
+    width: 100%;
+    height: 100%;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    color: #684b5a;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 11px;
+}
+
+
+.search-box input::placeholder {
+    color: #a58a96;
+}
+
+
+/* =========================================================
+   STATISTIK
+========================================================= */
+
+.stats-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 190px);
+
+    gap: 12px;
+
+    justify-content: end;
+}
+
+
+.stat-card {
+    min-height: 94px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 14px;
+
+    background: #ffffff;
+
+    border: 1px solid #f0dfe7;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 7px 20px rgba(157,82,111,.06);
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+
+.stat-card:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 11px 23px rgba(157,82,111,.10);
+}
+
+
+.stat-icon {
+    width: 47px;
+    height: 47px;
+
+    min-width: 47px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #f8eaf1;
+
+    color: #ae5d80;
+
+    border-radius: 13px;
+
+    font-size: 18px;
+}
+
+
+.stat-info {
+    min-width: 0;
+}
+
+
+.stat-info span {
+    display: block;
+
+    color: #765967;
+
+    font-size: 10px;
+}
+
+
+.stat-info strong {
+    display: block;
+
+    margin-top: 2px;
+
+    color: #4f3b44;
+
+    font-size: 22px;
+
+    line-height: 1.15;
+
+    font-weight: 700;
+}
+
+
+.stat-info small {
+    display: block;
+
+    margin-top: 2px;
+
+    color: #806b75;
+
+    font-size: 9px;
+}
+
+
+/* =========================================================
+   TABLE CONTAINER
+========================================================= */
+
+.table-container {
+    width: 100%;
+
+    background: #ffffff;
+
+    border: 1px solid #f0dfe7;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 9px 25px rgba(157,82,111,.07);
+
+    overflow: hidden;
+
+    margin-bottom: 17px;
+}
+
+
+/* =========================================================
+   TABLE HEADER
+========================================================= */
+
+.table-header {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding: 18px 20px;
+
+    border-bottom: 1px solid #f0dfe7;
+}
+
+
+.table-header h2 {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #5f4652;
+
+    font-size: 16px;
+
+    font-weight: 700;
+}
+
+
+.table-header h2 i {
+    color: #c47796;
+
+    font-size: 14px;
+}
+
+
+.table-header p {
+    margin-top: 3px;
+
+    color: #927c8c;
+
+    font-size: 9.5px;
+}
+
+
+.data-count {
+    height: 30px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 6px;
+
+    padding: 0 11px;
+
+    background: #fff4f8;
+
+    border: 1px solid #f1d8e3;
+
+    border-radius: 20px;
+
+    color: #c47796;
+
+    font-size: 9.5px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   TABLE WRAPPER
+========================================================= */
+
+.table-wrapper {
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+
+.table-wrapper::-webkit-scrollbar {
+    height: 6px;
+}
+
+
+.table-wrapper::-webkit-scrollbar-track {
+    background: #fffafd;
+}
+
+
+.table-wrapper::-webkit-scrollbar-thumb {
+    background: #ddb1c2;
+
+    border-radius: 10px;
+}
+
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.table-container table {
+    width: 100%;
+
+    min-width: 880px;
+
+    border-collapse: collapse;
+
+    table-layout: fixed;
+}
+
+
+/* COLUMN */
+
+.table-container th:nth-child(1),
+.table-container td:nth-child(1) {
+    width: 8%;
+}
+
+
+.table-container th:nth-child(2),
+.table-container td:nth-child(2) {
+    width: 23%;
+}
+
+
+.table-container th:nth-child(3),
+.table-container td:nth-child(3) {
+    width: 35%;
+}
+
+
+.table-container th:nth-child(4),
+.table-container td:nth-child(4) {
+    width: 17%;
+}
+
+
+.table-container th:nth-child(5),
+.table-container td:nth-child(5) {
+    width: 17%;
+}
+
+
+/* =========================================================
+   TABLE HEADER
+========================================================= */
+
+.table-container th {
+    height: 47px;
+
+    padding: 10px 12px;
+
+    background: #d08eaa;
+
+    color: #ffffff;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    text-align: center;
+
+    vertical-align: middle;
+
+    border-right: 1px solid rgba(255,255,255,.18);
+}
+
+
+.table-container th:last-child {
+    border-right: none;
+}
+
+
+/* =========================================================
+   TABLE BODY
+========================================================= */
+
+.table-container td {
+    min-height: 68px;
+
+    padding: 11px 13px;
+
+    background: #ffffff;
+
+    color: #684d5b;
+
+    font-size: 11px;
+
+    line-height: 1.4;
+
+    border-right: 1px solid #ead9e1;
+
+    border-bottom: 1px solid #ead9e1;
+
+    vertical-align: middle;
+}
+
+
+.table-container td:last-child {
+    border-right: none;
+}
+
+
+.table-container tr:last-child td {
+    border-bottom: none;
+}
+
+
+.table-container tbody tr {
+    transition: background .2s ease;
+}
+
+
+.table-container tbody tr:hover td {
+    background: #fff9fb;
+}
+
+
+/* =========================================================
+   NOMOR
+========================================================= */
+
+.nomor {
+    text-align: center;
+}
+
+
+.number-box {
+    width: 28px;
+    height: 28px;
+
+    margin: auto;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #faeaf2;
+
+    color: #a95d7e;
+
+    border-radius: 8px;
+
+    font-size: 10px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   NAMA
+========================================================= */
+
+.nama {
+    text-align: left;
+}
+
+
+.nama-wrapper {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+}
+
+
+.avatar {
+    width: 34px;
+    height: 34px;
+
+    min-width: 34px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #f8e8f0;
+
+    color: #ad5c80;
+
+    border-radius: 50%;
+
+    font-size: 11px;
+
+    font-weight: 600;
+}
+
+
+.nama strong {
+    color: #4f3b44;
+
+    font-size: 11px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   DATA WRAPPER
+========================================================= */
+
+.data-wrapper {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    min-width: 0;
+}
+
+
+.icon-box {
+    width: 31px;
+    height: 31px;
+
+    min-width: 31px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #f9eaf1;
+
+    color: #ad5c80;
+
+    border-radius: 9px;
+
+    font-size: 11px;
+}
+
+
+.data-wrapper > span:last-child {
+    min-width: 0;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   KEPERLUAN
+========================================================= */
+
+.keperluan {
+    text-align: left;
+}
+
+
+/* =========================================================
+   TANGGAL
+========================================================= */
+
+.tanggal {
+    text-align: left;
+}
+
+
+.tanggal-text {
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.tanggal-text strong {
+    color: #55414a;
+
+    font-size: 10.5px;
+
+    font-weight: 600;
+}
+
+
+.tanggal-text small {
+    margin-top: 1px;
+
+    color: #9a7f8b;
+
+    font-size: 8.5px;
+}
+
+
+/* =========================================================
+   JAM
+========================================================= */
+
+.jam {
+    text-align: left;
+}
+
+
+.jam .data-wrapper {
+    color: #6e5360;
+}
+
+
+/* =========================================================
+   EMPTY
+========================================================= */
+
+.empty-data {
+    min-height: 210px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 5px;
+
+    text-align: center;
+
+    color: #9a7c89;
+}
+
+
+.empty-data i {
+    margin-bottom: 4px;
+
+    color: #d08eaa;
+
+    font-size: 32px;
+}
+
+
+.empty-data strong {
+    color: #684d5b;
+
+    font-size: 13px;
+}
+
+
+.empty-data p {
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   RINGKASAN
+========================================================= */
+
+.summary-card {
+    width: 100%;
+
+    padding: 18px 20px;
+
+    margin-bottom: 17px;
+
+    background: #ffffff;
+
+    border: 1px solid #f0dfe7;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 9px 25px rgba(157,82,111,.07);
+}
+
+
+.summary-header {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding-bottom: 12px;
+
+    border-bottom: 1px solid #f0dfe7;
+}
+
+
+.summary-icon {
+    width: 39px;
+    height: 39px;
+
+    min-width: 39px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #f3d1df;
+
+    color: #c47796;
+
+    border-radius: 11px;
+
+    font-size: 14px;
+}
+
+
+.summary-header h2 {
+    color: #5f4652;
+
+    font-size: 16px;
+
+    font-weight: 700;
+}
+
+
+.summary-header p {
+    margin-top: 2px;
+
+    color: #927c8c;
+
+    font-size: 9px;
+}
+
+
+.summary-content {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 10px;
+
+    margin-top: 12px;
+}
+
+
+.summary-item {
+    min-height: 66px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    padding: 10px;
+
+    background: #fffafd;
+
+    border: 1px solid #f2e0e8;
+
+    border-radius: 11px;
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+
+.summary-item:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 6px 14px rgba(208,147,176,.07);
+}
+
+
+.summary-item-icon {
+    width: 33px;
+    height: 33px;
+
+    min-width: 33px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #f8e2ed;
+
+    color: #c47796;
+
+    border-radius: 9px;
+
+    font-size: 11px;
+}
+
+
+.summary-item span {
+    display: block;
+
+    color: #927c8c;
+
+    font-size: 8.5px;
+}
+
+
+.summary-item strong {
+    display: block;
+
+    margin-top: 2px;
+
+    color: #59434e;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    line-height: 1.3;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+.summary-item small {
+    display: block;
+
+    margin-top: 1px;
+
+    color: #b08fa0;
+
+    font-size: 8px;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-top: 14px;
+
+    color: #81727a;
+
+    font-size: 9.5px;
+}
+
+
+footer::before,
+footer::after {
+    content: "";
+
+    width: 38px;
+
+    height: 1px;
+
+    background: #e9c5d4;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1150px) {
+
+    .page-header {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-container {
+        justify-content: start;
+
+        grid-template-columns:
+            repeat(3, minmax(170px, 1fr));
+    }
+
+}
+
+
+@media (max-width: 850px) {
+
+    .content {
+        margin-left: 80px;
+
+        padding: 20px;
+    }
+
+    .stats-container {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .summary-content {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .content {
+        margin-left: 70px;
+
+        padding: 15px;
+    }
+
+    .title-section h1 {
+        font-size: 24px;
+    }
+
+    .title-section p {
+        font-size: 10px;
+    }
+
+    .search-box {
+        width: 100%;
+    }
+
+    .stats-container {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-card {
+        width: 100%;
+    }
+
+    .table-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .summary-content {
+        grid-template-columns: 1fr;
+    }
+
+    footer::before,
+    footer::after {
+        width: 25px;
+    }
+
+}
+
+/* =========================================================
+   FINAL - BESARKAN TEKS DATA KEPERLUAN
+   WARNA TETAP
+========================================================= */
+
+/* =========================
+   JUDUL
+========================= */
+
+.title-section h1 {
+    font-size: 32px !important;
+}
+
+.title-section p {
+    font-size: 14px !important;
+}
+
+
+/* =========================
+   SEARCH
+========================= */
+
+.search-box {
+    height: 45px !important;
+}
+
+.search-box input {
+    font-size: 12px !important;
+}
+
+.search-box i {
+    font-size: 15px !important;
+}
+
+
+/* =========================
+   STATISTIK
+========================= */
+
+.stat-info span {
+    font-size: 11px !important;
+}
+
+.stat-info strong {
+    font-size: 25px !important;
+}
+
+.stat-info small {
+    font-size: 10px !important;
+}
+
+
+/* =========================
+   JUDUL TABEL
+========================= */
+
+.table-header h2 {
+    font-size: 18px !important;
+}
+
+.table-header p {
+    font-size: 10px !important;
+}
+
+.data-count {
+    font-size: 10px !important;
+}
+
+
+/* =========================
+   HEADER TABEL
+========================= */
+
+.table-container th {
+    font-size: 12px !important;
+    padding: 13px 12px !important;
+}
+
+
+/* =========================
+   ISI TABEL
+========================= */
+
+.table-container td {
+    font-size: 12px !important;
+    padding: 14px 13px !important;
+}
+
+
+/* =========================
+   NOMOR
+========================= */
+
+.number-box {
+    width: 30px !important;
+    height: 30px !important;
+
+    font-size: 11px !important;
+}
+
+
+/* =========================
+   NAMA
+========================= */
+
+.nama strong {
+    font-size: 12px !important;
+}
+
+.avatar {
+    width: 36px !important;
+    height: 36px !important;
+    min-width: 36px !important;
+
+    font-size: 12px !important;
+}
+
+
+/* =========================
+   ICON TABEL
+========================= */
+
+.icon-box {
+    width: 34px !important;
+    height: 34px !important;
+    min-width: 34px !important;
+
+    font-size: 12px !important;
+}
+
+
+/* =========================
+   TANGGAL
+========================= */
+
+.tanggal-text strong {
+    font-size: 11px !important;
+}
+
+.tanggal-text small {
+    font-size: 9px !important;
+}
+
+
+/* =========================
+   JAM
+========================= */
+
+.jam .data-wrapper {
+    font-size: 12px !important;
+}
+
+
+/* =========================
+   RINGKASAN
+========================= */
+
+.summary-header h2 {
+    font-size: 18px !important;
+}
+
+.summary-header p {
+    font-size: 10px !important;
+}
+
+.summary-item span {
+    font-size: 10px !important;
+}
+
+.summary-item strong {
+    font-size: 11px !important;
+}
+
+.summary-item small {
+    font-size: 9px !important;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    font-size: 10px !important;
+}
+
+/* =========================================================
+   FINAL FINAL - TEKS LEBIH BESAR
+   HANYA UKURAN TULISAN
+   WARNA, KOTAK & LAYOUT TETAP
+========================================================= */
+
+/* =========================
+   JUDUL DATA KEPERLUAN
+========================= */
+
+.title-section h1 {
+    font-size: 34px !important;
+}
+
+.title-section p {
+    font-size: 14px !important;
+}
+
+
+/* =========================
+   SEARCH
+========================= */
+
+.search-box input {
+    font-size: 14px !important;
+}
+
+
+/* =========================
+   STATISTIK ATAS
+========================= */
+
+.stat-info span {
+    font-size: 13px !important;
+}
+
+.stat-info strong {
+    font-size: 29px !important;
+}
+
+.stat-info small {
+    font-size: 12px !important;
+}
+
+
+/* =========================
+   DAFTAR KEPERLUAN
+========================= */
+
+.table-header h2 {
+    font-size: 21px !important;
+}
+
+.table-header p {
+    font-size: 12px !important;
+}
+
+.data-count {
+    font-size: 12px !important;
+}
+
+
+/* =========================
+   HEADER TABEL
+========================= */
+
+.table-container th {
+    font-size: 14px !important;
+}
+
+
+/* =========================
+   ISI TABEL
+========================= */
+
+.table-container td {
+    font-size: 14px !important;
+}
+
+
+/* =========================
+   NOMOR
+========================= */
+
+.number-box {
+    font-size: 13px !important;
+}
+
+
+/* =========================
+   NAMA TAMU
+========================= */
+
+.nama strong {
+    font-size: 14px !important;
+}
+
+
+/* =========================
+   DATA KEPERLUAN
+========================= */
+
+.data-wrapper > span:last-child {
+    font-size: 14px !important;
+}
+
+
+/* =========================
+   TANGGAL
+========================= */
+
+.tanggal-text strong {
+    font-size: 13px !important;
+}
+
+.tanggal-text small {
+    font-size: 11px !important;
+}
+
+
+/* =========================
+   JAM MASUK
+========================= */
+
+.jam .data-wrapper {
+    font-size: 14px !important;
+}
+
+
+/* =========================================================
+   RINGKASAN KEPERLUAN
+========================================================= */
+
+/* Judul Ringkasan Keperluan */
+.summary-header h2 {
+    font-size: 22px !important;
+}
+
+/* Keterangan */
+.summary-header p {
+    font-size: 12px !important;
+}
+
+
+/* Tulisan kecil di setiap kotak */
+.summary-item span {
+    font-size: 13px !important;
+}
+
+
+/* Tulisan utama:
+   5 jenis
+   dania
+   mengantarkan berkas
+   4 kunjungan
+*/
+.summary-item strong {
+    font-size: 16px !important;
+}
+
+
+/* Tanggal */
+.summary-item small {
+    font-size: 11px !important;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    font-size: 11px !important;
+}
+
+/* =========================
+   DATA DALAM TABEL
+========================= */
+
+.table-container th {
+    font-size: 13px !important;
+}
+
+.table-container td {
+    font-size: 13px !important;
+}
+
+/* NAMA TAMU */
+.nama strong {
+    font-size: 13px !important;
+}
+
+/* KEPERLUAN */
+.data-wrapper > span:last-child {
+    font-size: 13px !important;
+}
+
+/* TANGGAL */
+.tanggal-text strong {
+    font-size: 12px !important;
+}
+
+.tanggal-text small {
+    font-size: 10px !important;
+}
+
+/* JAM MASUK */
+.jam .data-wrapper {
+    font-size: 13px !important;
+}
+
+/* NOMOR */
+.number-box {
+    font-size: 11px !important;
+}
+
+
+/* =========================
+   RINGKASAN KEPERLUAN
+========================= */
+
+.summary-header h2 {
+    font-size: 19px !important;
+}
+
+.summary-header p {
+    font-size: 11px !important;
+}
+
+.summary-item span {
+    font-size: 11px !important;
+}
+
+.summary-item strong {
+    font-size: 13px !important;
+}
+
+.summary-item small {
+    font-size: 10px !important;
+}
+
+
+/* =========================
+   STATISTIK ATAS
+========================= */
+
+.stat-info span {
+    font-size: 11px !important;
+}
+
+.stat-info strong {
+    font-size: 25px !important;
+}
+
+.stat-info small {
+    font-size: 9px !important;
+}
+
+/* =========================================================
+   FINAL - PERBESAR TEKS RINGKASAN KEPERLUAN
+   HANYA TEKS
+   WARNA & LAYOUT TIDAK DIUBAH
+========================================================= */
+
+/* Judul Ringkasan Keperluan */
+.summary-header h2 {
+    font-size: 22px !important;
+}
+
+/* Keterangan di bawah judul */
+.summary-header p {
+    font-size: 12px !important;
+}
+
+/* Label setiap kotak */
+.summary-item span {
+    font-size: 12px !important;
+}
+
+/* Isi utama setiap kotak */
+.summary-item strong {
+    font-size: 15px !important;
+}
+
+/* Tanggal */
+.summary-item small {
+    font-size: 11px !important;
+}
